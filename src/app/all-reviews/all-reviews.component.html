@@ -1,0 +1,22 @@
+<h1>Book Reviews</h1>
+<table>
+    <thead>
+        <tr>
+            <th>
+               Title
+            </th>
+            <th>
+               Rating
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let review of reviews">
+          <td>{{ review.title }}</td>
+          <td>{{ review.rating }}</td>
+      </tr>
+    </tbody>
+</table>
+<br />
+<button (click)="showAdd = true" [disabled]="showAdd">AddReview</button>
+<app-add-review *ngIf="showAdd" (reviewAdded)="showAdd = false"></app-add-review>

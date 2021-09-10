@@ -1,0 +1,13 @@
+<form #reviewForm="ngForm">
+    <ul>
+        <li>
+            <label for="title">Title:</label><input type="text" name="title" id="title" [(ngModel)]="title" required />
+        </li>
+        <li>
+            <label for="rating">Rating:</label><input type="number" name="rating" min="1" max="5" id="rating" [(ngModel)]="rating" required />
+        </li>
+        <li>
+            <button [disabled]="reviewForm.invalid" (click)="addReview()">Add</button>
+        </li>
+    </ul>
+</form>

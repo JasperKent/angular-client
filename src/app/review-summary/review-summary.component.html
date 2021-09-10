@@ -1,0 +1,19 @@
+<h1>Book Review Summaries</h1>
+<table>
+    <thead>
+        <tr>
+            <th>
+               Title
+            </th>
+            <th>
+               Rating
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let summary of summaries">
+          <td>{{ summary.title }}</td>
+          <td>{{ summary.rating  | number: '1.2-2' }}</td>
+      </tr>
+    </tbody>
+</table>
